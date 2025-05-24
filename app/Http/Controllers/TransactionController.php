@@ -30,7 +30,7 @@ class TransactionController extends Controller
             'customer_id' => 'required|exists:customers,id',
             'product_id' => 'required|exists:products,id',
             'quantity' => 'required|integer|min:1',
-            'transaction_date' => 'required|date',
+            'transaction_date' => 'required|date|after_or_equal:today',
         ]);
 
         $product = Product::findOrFail($request->product_id);
@@ -70,7 +70,7 @@ class TransactionController extends Controller
             'customer_id' => 'required|exists:customers,id',
             'product_id' => 'required|exists:products,id',
             'quantity' => 'required|integer|min:1',
-            'transaction_date' => 'required|date',
+            'transaction_date' => 'required|date|after_or_equal:today',
         ]);
 
         $transaction = Transaction::findOrFail($id);
