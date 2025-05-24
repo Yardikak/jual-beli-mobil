@@ -23,11 +23,11 @@
             <table class="min-w-full divide-y divide-gray-200 bg-white text-sm">
                 <thead class="bg-gray-100">
                     <tr>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Customer Name</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Email</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Phone</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Address</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Aksi</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Customer Name</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Email</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Phone</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Address</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">

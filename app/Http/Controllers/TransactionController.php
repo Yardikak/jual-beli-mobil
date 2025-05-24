@@ -29,11 +29,20 @@ class TransactionController extends Controller
         $request->validate([
             'customer_id' => 'required|exists:customers,id',
             'product_id' => 'required|exists:products,id',
-            'total_price' => 'required|numeric|min:0',
+            'quantity' => 'required|integer|min:1',
             'transaction_date' => 'required|date',
         ]);
 
-        Transaction::create($request->all());
+        $product = Product::findOrFail($request->product_id);
+        $total_price = $product->price * $request->quantity;
+
+        Transaction::create([
+            'customer_id' => $request->customer_id,
+            'product_id' => $request->product_id,
+            'quantity' => $request->quantity,
+            'total_price' => $total_price,
+            'transaction_date' => $request->transaction_date,
+        ]);
 
         return redirect()->route('transactions.index')->with('success', 'Transaksi berhasil ditambahkan.');
     }
@@ -60,13 +69,21 @@ class TransactionController extends Controller
         $request->validate([
             'customer_id' => 'required|exists:customers,id',
             'product_id' => 'required|exists:products,id',
-            'total_price' => 'required|numeric|min:0',
+            'quantity' => 'required|integer|min:1',
             'transaction_date' => 'required|date',
         ]);
 
         $transaction = Transaction::findOrFail($id);
+        $product = Product::findOrFail($request->product_id);
+        $total_price = $product->price * $request->quantity;
 
-        $transaction->update($request->all());
+        $transaction->update([
+            'customer_id' => $request->customer_id,
+            'product_id' => $request->product_id,
+            'quantity' => $request->quantity,
+            'total_price' => $total_price,
+            'transaction_date' => $request->transaction_date,
+        ]);
 
         return redirect()->route('transactions.index')->with('success', 'Transaksi berhasil diupdate.');
     }

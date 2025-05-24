@@ -20,11 +20,11 @@
             <table class="min-w-full divide-y divide-gray-200 bg-white text-sm">
                 <thead class="bg-gray-100">
                     <tr>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Nama Produk</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Deskripsi</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Harga</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Kategori</th>
-                        <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Aksi</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Nama Produk</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Deskripsi</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Kategori</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Harga</th>
+                        <th class="px-6 py-3 text-center text-md font-semibold text-gray-700 uppercase tracking-wider">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">

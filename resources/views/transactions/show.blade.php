@@ -1,6 +1,10 @@
 <x-layouts.app>
     <div class="max-w-3xl mx-auto py-10 px-4">
-        <h1 class="text-white text-2xl font-bold mb-6">Detail Transaksi</h1>
+        <x-slot name="header">
+            <h1 class="text-2xl font-bold text-gray-800 dark:text-white">
+                Detail Transaksi
+            </h1>
+        </x-slot>
 
         <div class="bg-white p-6 shadow rounded">
             <p class="mb-2"><strong>Pelanggan:</strong> {{ $transaction->customer->custFullN }}</p>
