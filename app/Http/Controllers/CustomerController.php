@@ -22,9 +22,9 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255|not_regex:/-/',
+            'name' => 'required|string|max:255|regex:/^[A-Za-z\s]+$/u',
             'email' => 'required|email|unique:customers,email',
-            'phone' => 'required|string|max:15|regex:/^[0-9]+$/',
+            'phone' => 'required|string|min:10|max:15|regex:/^(\+62|62|08)[0-9]{8,13}$/',
             'address' => 'required|string',
         ]);
 
@@ -43,9 +43,9 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required|string|max:255|not_regex:/-/',
+            'name' => 'required|string|max:255|regex:/^[A-Za-z\s]+$/u',
             'email' => 'required|email|unique:customers,email,' . $id,
-            'phone' => 'required|string|max:15',
+            'phone' => 'required|string|min:10|max:15|regex:/^(\+62|62|08)[0-9]{8,13}$/',
             'address' => 'required|string',
         ]);
 
